@@ -40,5 +40,5 @@ mvn spring-boot:run
 
 ## Credits
 
-	Thanks to Raghul Thangavel(https://github.com/raghulrage). His Car Parking Project Helped Me to Convert Into this One. 
+	Thanks to Raghul Thangavel.His Car Parking Project Helped Me to Convert Into this One. 
 
