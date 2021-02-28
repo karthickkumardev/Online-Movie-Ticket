@@ -1,0 +1,212 @@
+PS F:\Project\Car-Parking-master\spring\remotehiring> mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.remotehiring:remotehiring >--------------------
+[INFO] Building remotehiring 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.3.1.RELEASE:run (default-cli) > test-compile @ remotehiring >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ remotehiring ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ remotehiring ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ remotehiring ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory F:\Project\Car-Parking-master\spring\remotehiring\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ remotehiring ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:2.3.1.RELEASE:run (default-cli) < test-compile @ remotehiring <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.3.1.RELEASE:run (default-cli) @ remotehiring ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.1.RELEASE)
+
+2021-02-20 21:11:39.211  INFO 12628 --- [           main] c.remotehiring.RemotehiringApplication   : Starting RemotehiringApplication on Karthi with PID 12628 (F:\Project\Car-Parking-master\spring\remotehiring\target\classes started by karthi in F:\Project\Car-Parking-master\spring\remotehiring)
+2021-02-20 21:11:39.214  INFO 12628 --- [           main] c.remotehiring.RemotehiringApplication   : No active profile set, falling back to default profiles: 
+default
+2021-02-20 21:11:39.750  INFO 12628 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-02-20 21:11:39.808  INFO 12628 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 6 JPA repository interfaces.
+2021-02-20 21:11:40.262  INFO 12628 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-20 21:11:40.271  INFO 12628 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-20 21:11:40.274  INFO 12628 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2021-02-20 21:11:40.384  INFO 12628 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-20 21:11:40.384  INFO 12628 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1120 ms
+2021-02-20 21:11:40.510  INFO 12628 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-20 21:11:40.543  INFO 12628 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-20 21:11:40.583  INFO 12628 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2021-02-20 21:11:40.664  WARN 12628 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-20 21:11:40.695  INFO 12628 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-02-20 21:11:40.776  INFO 12628 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-20 21:11:40.934  INFO 12628 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path 
+''
+2021-02-20 21:11:40.936  INFO 12628 --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositoriesà
+2021-02-20 21:11:41.926 ERROR 12628 --- [         task-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: The server time zone value 'unknown' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+        at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:76) ~[mysql-connector-java-8.0.20.jar:8.0.20]       
+        at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
+        at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+        at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+        at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
+        at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
+        at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
+        at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
+        at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+        at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zone value 'unknown' is unrecognized or represents more than one time 
+zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want 
+to utilize time zone support.
+        at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+        at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64) ~[na:na]
+        at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+        at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+        at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+        at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.util.TimeUtil.getCanonicalTimezone(TimeUtil.java:132) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.protocol.a.NativeProtocol.configureTimezone(NativeProtocol.java:2120) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.protocol.a.NativeProtocol.initServerSession(NativeProtocol.java:2143) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:1310) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:967) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826) ~[mysql-connector-java-8.0.20.jar:8.0.20]
+        ... 33 common frames omitted
+
+2021-02-20 21:11:42.099  WARN 12628 --- [         task-1] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata 
+: The server time zone value 'unknown' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+2021-02-20 21:11:42.102  WARN 12628 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'locationsRepository' defined in com.remotehiring.Locations.LocationsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaMappingContext' while setting bean property 'mappingContext'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaMappingContext': Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-02-20 21:11:42.104  INFO 12628 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-20 21:11:42.125  WARN 12628 --- [           main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]       
+2021-02-20 21:11:42.147  INFO 12628 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'  
+2021-02-20 21:11:42.173  INFO 12628 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-02-20 21:11:42.203  INFO 12628 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-20 21:11:42.205 ERROR 12628 --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'locationsRepository' defined in com.remotehiring.Locations.LocationsRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaMappingContext' while setting bean property 'mappingContext'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaMappingContext': Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+        at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1699) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1444) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:621) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:609) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:51) ~[spring-data-commons-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at org.springframework.data.repository.config.DeferredRepositoryInitializationListener.onApplicationEvent(DeferredRepositoryInitializationListener.java:36) ~[spring-data-commons-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:898) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:554) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+        at com.remotehiring.RemotehiringApplication.main(RemotehiringApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaMappingContext': Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        ... 28 common frames omitted
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+        at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+        at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.17.Final.jar:5.4.17.Final]
+        ... 17 common frames omitted
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.800 s
+[INFO] Finished at: 2021-02-20T21:11:42+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.3.1.RELEASE:run (default-cli) on project remotehiring: Application finished with exit code: 1 -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+PS F:\Project\Car-Parking-master\spring\remotehiring> 

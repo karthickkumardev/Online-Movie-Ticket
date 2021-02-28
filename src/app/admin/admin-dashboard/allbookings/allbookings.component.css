@@ -1,0 +1,5 @@
+.thead{
+    background: #cc3d00 radial-gradient(circle at 60% 100%,#ffa436 5%,#cc3d00 94%);color: black;
+    clip-path: polygon(0 16%, 100% 0, 100% 84%, 0% 100%);
+    color: black;
+}

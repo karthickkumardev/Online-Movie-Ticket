@@ -1,0 +1,23 @@
+<!-- <app-header-login></app-header-login> -->
+<div class="row justify-content-center">
+    <div class="col-md-2 p-0 sidebar d-flex align-items-center flex-column">
+        <div>
+            <button routerLink="/admin-dashboard" class="button">Add Movies</button>
+        </div>
+        <div>
+            <button routerLink="/admin-dashboard/add-slot" class="button">Add Shows</button>
+        </div>
+        <div>
+            <button routerLink="/admin-dashboard/add-vehicle" class="button">Add Seating</button>
+        </div>
+        <div>
+            <button routerLink="/admin-dashboard/allbookings" class="button">All Bookings</button>
+        </div>
+        <div>
+            <button (click)="logout()" class="button">Logout</button>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+</div>

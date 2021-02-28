@@ -1,0 +1,89 @@
+<div class="row mt-3  justify-content-center">
+    <div class="col-md-11 card" >
+        <div class="row " style="background: #cc3d00 radial-gradient(circle at 60% 100%,#ffa436 5%,#cc3d00 94%);color: black;margin: 10px;padding: 10px;">
+            <div class="col-md-12 d-flex justify-content-center" >
+                <h2>Add Movie</h2>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <form name="form" [formGroup] = "form" (ngSubmit) = "form.valid && onSubmit()" class="card m-2">
+                            <div class="col-md-12">
+                                <div class="m-1">
+                                    <input class="input form-control" formControlName="location_name" [ngClass]="{ 'is-invalid':form.get('location_name').touched && form.get('location_name').invalid}" name="location_name" type="text" placeholder="Movie Name"  autocomplete="off" required>
+                                    <div class="invalid-feedback">
+                                        <div>
+                                            This Field is required!!
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="m-1">
+                                    <input class="input form-control" formControlName="area" [ngClass]="{ 'is-invalid':form.get('area').touched && form.get('area').invalid}" name="area" type="text" placeholder="Theatre Name" required>
+                                    <div class="invalid-feedback">
+                                        <div>
+                                            This Field is required!!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="m-1">
+                                    <input class="input form-control" formControlName="cast" [ngClass]="{ 'is-invalid':form.get('cast').touched && form.get('cast').invalid}" name="area" type="text" placeholder="About the Movie and Cast" required>
+                                    <div class="invalid-feedback">
+                                        <div>
+                                            This Field is required!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="m-1">
+                                    <input class="input form-control" formControlName="bannerimage" [ngClass]="{ 'is-invalid':form.get('bannerimage').touched && form.get('bannerimage').invalid}" name="bannerimage" type="text" placeholder="Paste the Poster Image URL" required>
+                                    <div class="invalid-feedback">
+                                        <div>
+                                            This Field is required!!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-2 mb-5 ">
+                                <div class="m-1 mt-4">
+                                    <button class="button" type="submit" [disabled]="!form.valid">Add</button>
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <div class="m-2">
+                            <h3 class="font-weight-bold">Movies Available:</h3>
+                        </div>
+                        
+                        <div class="card m-2">
+                            <div class="row p-2">
+                                <div class="col">
+                                    <b>Movie</b>
+                                </div>
+                                <div class="col">
+                                   <b>Theatre</b>
+                                </div>
+                            </div>
+                            <hr class="m-1">
+                            <div class="row p-2" *ngFor='let location of locations$'>
+                                <div class="col" >
+                                    {{location.location_name}}
+                                </div>
+                                <div class="col">
+                                    {{location.area}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

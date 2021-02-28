@@ -1,0 +1,62 @@
+<div class="row mt-3  justify-content-center">
+    <div class="col-md-11 card " >
+        <div class="row " style="background: #cc3d00 radial-gradient(circle at 60% 100%,#ffa436 5%,#cc3d00 94%);;color: black;margin: 10px;padding: 10px;">
+            <div class="col-md-12 d-flex justify-content-center" >
+                <h2>My Bookings</h2>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="row mb-3">
+                    <div class="col-md-12 overflow-auto" style="height: 35rem;">
+                        <div class="accordion" id="accordionExample">
+                            <div *ngIf='!show'>
+                                <div *ngFor='let booking of bookings$'  class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h3><b>Location :</b> {{booking.locationid}}</h3>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <h3><b>Date :</b> {{booking.time}}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-auto mr-auto">
+                                                  <b>Show Time : </b> {{booking.slotid}} <br> 
+                                                  <b>Seating Type :</b> {{booking.vehicle_type}} <br> 
+                                                  <b>Count :</b> {{booking.duration}}<br> 
+                                                  <div *ngIf="booking.paid != 0 || booking.paid == 0">
+                                                    <b>Cost :</b> {{booking.cost}} Rs
+                                                  </div>
+                                                </div>
+                                                <div class="col-auto" *ngIf='booking.paid == 0'>
+                                                  <button class="button" (click) = 'endBooking(booking.bookingid)'>Confirm</button>
+                                                </div>
+                                                <div class="col-auto" *ngIf='booking.paid != 0'>
+                                                    <p class="text-success font-weight-bold">Booking Completed</p>
+                                                  </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div *ngIf='show'>
+                                <h2>
+                                    No Bookings Found...
+                                </h2>
+                                <button class="button" routerLink='/dashboard' > Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,62 @@
+<div class="row mt-3  justify-content-center">
+  <div class="col-md-11 card" >
+    <div class="row " style="background: #cc3d00 radial-gradient(circle at 60% 100%,#ffa436 5%,#cc3d00 94%);color: Black;margin: 10px;padding: 10px;">
+      <div class="col-md-12 d-flex justify-content-center" >
+        <h2>Movies</h2>
+      </div>
+    </div>
+    <hr>
+    <div class="row mt-2">
+      <div class="col-md-12">
+        <div class="row mb-3">
+          <div class="col-md-12 overflow-auto" style="height: 35rem;">
+            <div>
+              <div *ngFor='let location of locations$' class="card">
+                <div class="card-header flex-row" >
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h2><b>{{location.location_name}}</b></h2>
+                    </div>
+                    <div class="col-auto">
+                      <button class="button" type="button" routerLink="/dashboard/bookslot/{{location.locationid}}">
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>             
+                <div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-7 mr-auto">
+                        <h4><b> Location :</b></h4> <p>{{location.area}}</p>
+                        <hr>
+                        <h4><b> About : </b></h4> <p>{{location.cast}}</p>
+                        <div class="col-md-7 mr-auto">
+                        </div>
+                      </div>
+                      <div class="col-auto mr-auto">
+                        <br><h3><b>Shows :</b> {{location.slots}}</h3>
+                        <br><h4><b> Seatings :  </b></h4>
+                        <div *ngFor='let vehicle of vehicles$'>
+                          <p>{{vehicle.vehicle_type}} : Rs {{vehicle.cost}}</p>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="col-auto">
+                        <div class="col-auto">
+                          <img src="{{location.bannerimage}}" width="163px" height="208px"alt="error">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
